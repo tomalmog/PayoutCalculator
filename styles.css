@@ -1,0 +1,44 @@
+
+body {
+    background-color: rgb(33, 32, 32);
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+}
+
+ul {
+    list-style-type: none;
+    padding-top: 25px;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+li {
+    padding: 10px;
+}
+
+label {
+    float: left;
+}
+
+input {
+    float: right;
+}
+
+
+
+.form_container {
+    width: min-content;
+    margin: auto;
+
+    
+}
+
+
+#calculator {
+    margin: auto;
+    width: max-content;
+    height: max-content;
+    background-color: rgb(62, 92, 119);
+    border-radius: 5%;
+}
