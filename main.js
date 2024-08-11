@@ -1,46 +1,39 @@
-const chipValue = document.getElementById("chip_value");
-const chipAmount = document.getElementById("chip_amount");
-const buyValue = document.getElementById("buy_value");
-const buyAmount = document.getElementById("buy_amount");
+const title = document.getElementById("title");
+const mainDiv = document.getElementById("main");
 
-const moneyIn = document.getElementById("money_in");
-const moneyOut = document.getElementById("money_out");
-const totalPot = document.getElementById("total_pot");
-
-const calculateBtn = document.getElementById("calculate_btn");
-const resetBtn = document.getElementById("reset_pot");
-
-var currentPotvalue = 0;
+const valuesDiv = document.getElementById("values");
+const amountsDiv = document.getElementById("amounts");
 
 
+const addButton = document.getElementById("addpair");
+const subtractButton = document.getElementById("subtractpair");
 
+addButton.addEventListener('click', createChipPair);
+subtractButton.addEventListener('click', removeChipPair);
 
-function calculate() {
+var onScreenPairs = [];
 
-    var monIn = buyValue.value * buyAmount.value;
-    monIn = monIn.toFixed(3);
-    moneyIn.value = monIn;
-
-    var moneyInHand = chipValue.value * chipAmount.value;
-    currentPotvalue += moneyInHand;
-    currentPotvalue = parseFloat(currentPotvalue.toFixed(3));
-    totalPot.value = currentPotvalue;
-
-    var monOut = moneyInHand - monIn;
-    monOut = monOut.toFixed(3);
-    moneyOut.value = monOut;
-
-    chipAmount.value = '';
+function createChipPair() {
+    onScreenPairs.push([createInput(valuesDiv), createInput(amountsDiv)]);
 }
 
-function reset() {
-    currentPotvalue = 0;
-    totalPot.value = currentPotvalue;
+function removeChipPair() {
+    const inputs = onScreenPairs.pop();
+    inputs[0].remove();
+    inputs[1].remove();
+
 }
 
+function createInput(parent) {
+    const newInput = document.createElement("input");
+    parent.appendChild(newInput);
+    return newInput;
+}
 
-calculateBtn.addEventListener('click',calculate);
-resetBtn.addEventListener('click',reset);
+function removeInput(parent, child) {
+    parent.removeChild(child);
+}
+
 
 
 

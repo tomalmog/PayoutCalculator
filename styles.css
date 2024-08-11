@@ -6,39 +6,37 @@ body {
     font-size: 1rem;
 }
 
-ul {
-    list-style-type: none;
-    padding-top: 25px;
-    padding-right: 25px;
-    padding-left: 25px;
-}
-
-li {
-    padding: 10px;
-}
-
-label {
-    float: left;
-}
-
-input {
-    float: right;
-}
-
-
-
-.form_container {
-    width: min-content;
+#main {
     margin: auto;
-
-    
-}
-
-
-#calculator {
-    margin: auto;
-    width: max-content;
-    height: max-content;
+    width: 350px;
+    height: 350px;
     background-color: rgb(62, 92, 119);
     border-radius: 5%;
+}
+
+
+#chipinfo {
+    display: flex;
+}
+
+#editpairs button {
+    width: 108px;
+
+}
+
+
+#values, #addpair {
+    width: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#amounts, #subtractpair {
+    width: 100px;
+    margin-right: 50px;
+}
+
+
+#chipinfo input, #editpairs button {
+    width: 92px;
 }
