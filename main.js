@@ -1,39 +1,27 @@
-const title = document.getElementById("title");
-const mainDiv = document.getElementById("main");
+const whiteInput = document.getElementById("white");
+const redInput = document.getElementById("red");
+const blueInput = document.getElementById("blue");
+const greenInput = document.getElementById("green");
+const buyInInput = document.getElementById("buyin");
 
-const valuesDiv = document.getElementById("values");
-const amountsDiv = document.getElementById("amounts");
+const outputText = document.getElementById("moneyout");
+
+const calculateButton = document.getElementById("calculate");
+
+calculateButton.addEventListener('click', calculate);
+
+function calculate () {
+    var total = buyInInput.value * -5;
+    total += whiteInput.value * 1;
+    total += redInput.value * 0.5;
+    total += blueInput.value * 0.1;
+    total += greenInput.value * 0.02;
+
+    total = total.toFixed(2);
+
+    outputText.value = total;
 
 
-const addButton = document.getElementById("addpair");
-const subtractButton = document.getElementById("subtractpair");
-
-addButton.addEventListener('click', createChipPair);
-subtractButton.addEventListener('click', removeChipPair);
-
-var onScreenPairs = [];
-
-function createChipPair() {
-    onScreenPairs.push([createInput(valuesDiv), createInput(amountsDiv)]);
 }
-
-function removeChipPair() {
-    const inputs = onScreenPairs.pop();
-    inputs[0].remove();
-    inputs[1].remove();
-
-}
-
-function createInput(parent) {
-    const newInput = document.createElement("input");
-    parent.appendChild(newInput);
-    return newInput;
-}
-
-function removeInput(parent, child) {
-    parent.removeChild(child);
-}
-
-
 
 

@@ -24,29 +24,39 @@
 
         <div id="main">
             <div id="chipinfo">
-                <div id="values">
-                    <h4>Value</h4>
-                   
-
+                <div class="pair">
+                    <h4>Number of White Chips: </h4>
+                    <input type="number" id="white">
+                </div>
+                <div class="pair">
+                    <h4>Number of Red Chips: </h4>
+                    <input type="number" id="red">
+                </div>
+                <div class="pair">
+                    <h4>Number of Blue Chips: </h4>
+                    <input type="number" id="blue">
+                </div>
+                <div class="pair">
+                    <h4>Number of Green Chips: </h4>
+                    <input type="number" id="green">
+                </div>
+                <div class="pair">
+                    <h4>Number of Buy Ins: </h4>
+                    <input type="number" id="buyin" value="1">
                 </div>
 
-                <div id="amounts">
-                    <h4>Amount</h4>
-                    
-                    
+                <button id="calculate">Calculate</button>
 
+                <div class="pair">
+                    <h4>Money Out: </h4>
+                    <input type="number" id="moneyout" readonly>
                 </div>
 
 
 
-            </div>
-
-            <div id="editpairs">
-                <button id="addpair">+</button>
-                <button id="subtractpair">-</button>
+                
 
             </div>
-
         </div>
 
        <script>
