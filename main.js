@@ -2,7 +2,7 @@ const whiteInput = document.getElementById("white");
 const redInput = document.getElementById("red");
 const blueInput = document.getElementById("blue");
 const greenInput = document.getElementById("green");
-const buyInInput = document.getElementById("buyin");\
+const buyInInput = document.getElementById("buyin");
 const buyInValueInput = document.getElementById("buyinvalue");
 
 const outputText = document.getElementById("moneyout");
