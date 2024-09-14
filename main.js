@@ -12,7 +12,7 @@ const calculateButton = document.getElementById("calculate");
 calculateButton.addEventListener('click', calculate);
 
 function calculate () {
-    var chipValue = buyInValue.value / 250;
+    var chipValue = buyInValueInput.value / 250;
     var total = -(buyInInput.value * buyInValue.value);
     total += whiteInput.value * 50 * chipValue;
     total += redInput.value * 25 * chipValue;
